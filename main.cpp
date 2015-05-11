@@ -6,7 +6,8 @@
 #include <iomanip>
 using namespace std;
 
-const int SZ=10000;
+// Size of the data-parallel array
+const int DataParallelArraySize = 10000;
 
 /// <summary>
 /// Mains this instance.
@@ -14,17 +15,15 @@ const int SZ=10000;
 /// <returns></returns>
 int main()
 {
-	par<double> term(SZ),x(SZ);
+	// Create a data parallel array of size DataParallelArraySize
+	par<double> x(DataParallelArraySize);
 
+	// Assign data-parallel variable it's self address: 1,2,3, ..., DataParallelArraySize
 	self_address(x);
 
-	cout << 
-		 reduce_sum(4.0/(1.0+(x*2.0))*pow(-1.0,x))
-		 << endl;
-
-	par<char *> ch(5);
-	ch = "hello";
-	cout<<endl<<ch<<endl;
+	// Compute and output PI, in one line of data-parallel code based on PI definition
+	// Note: this is not a fast method.
+	cout <<  reduce_sum(4.0/(1.0+(x*2.0))*pow(-1.0,x)) << endl;
 
 	return 0;
 }
