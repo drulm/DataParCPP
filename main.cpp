@@ -1,9 +1,11 @@
 // ----------------------------------------------------------------------------------
 //		TEST PROGRAM FOR PARALLEL CLASSES
 // ----------------------------------------------------------------------------------
+
 #include "par.h"
 #include <iostream>
 #include <iomanip>
+
 using namespace std;
 
 // Size of the data-parallel array
