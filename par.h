@@ -1,4 +1,3 @@
-
 // ----------------------------------------------------------------------------------
 //		Very Simple data-parallel class for educational purposes
 // ----------------------------------------------------------------------------------
@@ -8,7 +7,9 @@
 #include <iomanip>
 using namespace std;
 
-	//	-------------- symbolic functions ---------------
+
+
+//	-------------- symbolic functions ---------------
 
 /// <summary>
 /// Adds the specified x.
